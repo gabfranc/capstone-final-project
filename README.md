@@ -6,6 +6,9 @@
 
 ### WIREFRAMING & MOCKUP CREATING
  - Figma
+ - Jira
+
+[Jira Project](https://gabbyvictorious1.atlassian.net/jira/software/projects/CAP/boards/2?atlOrigin=eyJpIjoiZWNmYjZhNjE1NTJhNGRhNWFmNjZiYTFhODdhOTA5ZTciLCJwIjoiaiJ9)
 
 ### Programming Language & Frameworks
   - VUEJS
