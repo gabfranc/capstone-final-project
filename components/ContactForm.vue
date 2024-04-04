@@ -18,8 +18,15 @@
 <template>
   <h2>Have Any Questions?</h2>
   <form @submit.prevent="onSubmit">
-    <div>
-      <input v-model="email" type="email" class="mt-4 block w-full rounded-sm border-x-red-900"/>
+    <div class="mb-4">
+      <input v-model="name" type="text" class="mt-4 block w-full rounded-sm"/>
     </div>
+    <div class="mb-4">
+      <input v-model="email" type="email" class="mt-4 block w-full rounded-sm"/>
+    </div>
+    <div class="mb-4">
+      <textarea name="message" id="message" class="mt-4 block w-full rounded-sm"></textarea>
+    </div>
+
   </form>
 </template>
