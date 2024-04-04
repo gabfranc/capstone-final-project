@@ -26,3 +26,11 @@
     }
   };
 </script>
+<template>
+  <nav>
+    <ul class="list-none">
+      <li> Current Time:{{ currentTime }} </li>
+      <li> New Time (1 hour added): {{ newTime }}</li>
+    </ul>
+  </nav>
+</template>
