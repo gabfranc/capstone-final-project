@@ -7,12 +7,13 @@ const password = ref(null);
 const errorMsg = ref(null);
 async function login() {
   try {
-    let { error } = await client.auth.signInWithPassword({
+    let { data, error } = await client.auth.signInWithPassword({
       email: email.value,
       password: password.value,
     });
+    console.log("login", data, error);
     if (error) throw error;
-    router.push("/blogs");
+    router.push("/confirm");
   } catch (error) {
     errorMsg.value = error.message;
   }
