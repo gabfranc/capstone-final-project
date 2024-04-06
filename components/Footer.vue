@@ -1,11 +1,17 @@
 <template>
-  <footer class="flex text-center text-white font-sans py-4 bg-black">
-    <p><img src="../Images/darkfav.png" alt="logo-icon"></p>
-    <p class="font-sans">All Rights Reserved &copy; 2034 </p>
-    <div id="social-media" class="flex">
-      <img src="../Images/instagram.png" alt="instagram">
-      <img src="../Images/facebook.png" alt="facebook">
-      <img src="../Images/tik-tok.png" alt="tiktok">
+  <footer class="justify-center overflow-hidden flex relative text-white font-sans bg-black h-36 w-auto m-auto">
+   <div class="relative flex gap-4 m-auto p-auto">
+    <p><img src="../Images/darkfav.png" class="h-12 w-16 m-auto p-auto" alt="logo-icon"></p>
+    
+    <div id="social-media" class="flex gap-4 m-auto p-auto">
+      <img src="../Images/instagram.png" class="invert h-8" alt="instagram">
+      <img src="../Images/facebook.png" class="invert h-8" alt="facebook">
+      <img src="../Images/tik-tok.png" class="invert h-8" alt="tiktok">
+    </div>
+   </div> 
+   <div class=" flex relative text-center m-auto p-auto gap-2">
+      <div id="copy"><p>&copy; 2024.</p></div>
+      <div id="copy-par"><p>All Rights Reserved.</p></div>
     </div>
   </footer>
 </template>
