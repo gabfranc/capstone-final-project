@@ -45,7 +45,8 @@ onUnmounted(() => {
 
 </script>
 <template>
-  <div class="fixed">
-    <img :src="currentImage" alt="Hero Images" class="w-full h-full max-h-[500px] object-cover object-top overflow-auto m-auto p-auto">
+  <div class="relative">
+    <img :src="currentImage" alt="Hero Image" class="relative w-full h-full max-h-[600px] object-cover object-top mt-12" />
   </div>
+  
 </template>

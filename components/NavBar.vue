@@ -4,7 +4,7 @@
       <img src="../Images/Dark.png" class="h-14" alt="Logo Image">
     </NuxtLink>
 
-    <ul class="font-sans flex text-12">
+    <ul class="font-sans flex gap-14 text-12 mt-4 p-4">
       <li><NuxtLink to="/about">ABOUT</NuxtLink></li>
       <li><NuxtLink to="/create">CREATE</NuxtLink></li>
       <li><NuxtLink to="/blog">WHAT'S NEW</NuxtLink></li>

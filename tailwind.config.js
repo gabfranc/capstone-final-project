@@ -1,3 +1,4 @@
+const defaultTheme = require('tailwindcss/defaultTheme')
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
@@ -21,10 +22,6 @@ export default {
       'yellow': '#cdc392',
       'orange': '#ffd670',
       'maroon': '#912f40'
-    },
-    fontFamily: {
-      serif: ['Jomhuria', 'serif'],
-      sans: ['Jost', 'sans']
     },
     extend: {
       spacing: {
