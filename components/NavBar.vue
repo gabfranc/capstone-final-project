@@ -10,7 +10,7 @@
       <li><NuxtLink to="/blog">WHAT'S NEW</NuxtLink></li>
       <li><NuxtLink to="/contact">CONTACT</NuxtLink></li>
       <button type="button"><NuxtLink to="/login">LOG IN</NuxtLink></button>
-      <button type="button"><NuxtLink to="/signup">SIGN UP</NuxtLink></button>
+      <button type="button"><NuxtLink to="/sign-up">SIGN UP</NuxtLink></button>
     </ul>
   </nav>
 </template>
