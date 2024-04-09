@@ -34,11 +34,12 @@ async function login(){
   <main class="relative">
     <img :src="currentImage" class="relative" alt="Image Backgrounnd">
     <div class="relative m-auto p-auto">
-      <header>LOG IN</header>
-      <form @submit.prevent="login">
+      <header class="relative">LOG IN</header>
+      <form @submit.prevent="login" class="relative block">
+        <div>
         <input type="email" name="email" placeholder="EMAIL" id="email" v-model="email" />
-        <input type="email" name="password" placeholder="PASSWORD" id="password" v-model="password" />
-        
+        <input type="password" name="password" placeholder="PASSWORD" id="password" v-model="password" />
+        </div>
         <button type="submit" value="login" @click="login"> LOG IN </button>
       </form>
     </div>

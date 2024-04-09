@@ -1,3 +1,8 @@
+<script setup>
+const { data: recipes } = await useFetch("/pages/recipes", {
+  headers: useRequestHeaders(["cookie"]),
+})
+</script>
 <template>
   <main>
    <Hero />
@@ -11,5 +16,6 @@
         </p>
       </div>
     </section>
+    <ContactForm />
   </main>
 </template>
