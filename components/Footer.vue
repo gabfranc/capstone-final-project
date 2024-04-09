@@ -1,5 +1,5 @@
 <template>
-  <footer class="justify-center overflow-hidden flex relative text-white font-sans bg-black h-36 w-auto m-auto">
+  <footer class="relative justify-center overflow-hidden flex text-white font-sans bg-black h-36 w-auto m-auto">
    <div class="relative flex gap-4 m-auto p-auto">
     <p><img src="../Images/darkfav.png" class="h-12 w-16 m-auto p-auto" alt="logo-icon"></p>
     

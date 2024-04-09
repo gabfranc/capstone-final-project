@@ -32,6 +32,5 @@ export default {
         '4xl': '2rem',
       }
     }
-  },
-  plugins: [],
+  }
 };

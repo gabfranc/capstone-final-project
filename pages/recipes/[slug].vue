@@ -1,6 +1,6 @@
 <script setup>
 const route = useRoute();
-const { data: post } = await useFetch(`/api/recipe${route.params.slug}`);
+const { data: post } = await useFetch(`/api/blog/${route.params.slug}`);
 </script>
 <template>
   <main>

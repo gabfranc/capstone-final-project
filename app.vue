@@ -3,5 +3,5 @@
   <NuxtLayout>
     <NuxtPage />
   </NuxtLayout>
-  <LazyFooter class="relative"/>
+  <LazyFooter />
 </template>

@@ -1,38 +1,16 @@
 <script setup>
-import { ref } from 'vue';
-const supabase = useSupabaseClient();
-const router = useRouter();
-
-const { data: recipes } = await useAsyncData("recipes", async () =>{
-  const { data } = await supabase.from("recipes").select("*");
+const { data: post } = await useFetch("/api/blog", {
+  headers: useRequestHeaders(["cookie"]),
 });
-
-const selectRecipe = ref(null);
-
-const openRecipe = (recipe) => {
-  selectRecipe.value = recipe;
-};
-
-const hideRecipe = () => {
-  selectRecipe.value = null;
-};
-
 </script>
 <template>
-  <section>
+  <main></main>
+  <div>
     <ul>
-      <li v-for="(recipe, index) in recipes" :key="index">
-        <NuxtLink :to="`/recipes/${recipe.slug}`">{{ recipe.title }}</NuxtLink>
-      
-        <div v-if="selectRecipe && selectRecipe.id === recipe.id" class="popup">
-          <div class="recipe-content">
-            <h2>{{ selectRecipe.title }}</h2>
-            <p>{{  selectRecipe.description }}</p>
-
-            <button @click="hideRecipe">Hide Recipe</button>
-          </div>
-        </div>
+      <li v-for="(recipes, index) in posts" :key="index">
+        <NuxtLink :to="`/recipes/${recipes.slug}`">{{ recipes.title }}</NuxtLink>
       </li>
     </ul>
-  </section>
+  </div>
+  <button type="button"><NuxtLink to="/">HOME</NuxtLink></button>
 </template>
