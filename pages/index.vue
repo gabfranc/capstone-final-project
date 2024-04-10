@@ -4,7 +4,7 @@ const { data: recipes } = await useFetch("/pages/recipes", {
 })
 </script>
 <template>
-  <main>
+  <main class="relative h-full bg-yellow">
    <Hero />
    
     <section>

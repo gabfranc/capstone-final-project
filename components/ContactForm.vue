@@ -5,13 +5,13 @@ const header = ref('GOT A QUESTION?');
 const parEl = ref('please contact us!');
 </script>
 <template>
-  <header>
+  <header class="text-center p-40">
   <h1>{{ header }}</h1>
   <p>{{ parEl }}</p>
   </header>
-  <main class="relative m-auto p-auto">
+  <main class="relative justify-center align-middle text-center m-auto p-auto">
     <form class="block m-auto p-auto">
-      <div class="block">
+      <div class="block gap-8 p-8">
       <input type="text" name="name" placeholder="name" v-model="name"/>
       <input type="email" name="email" placeholder="email" v-model="email"/>
       <div>

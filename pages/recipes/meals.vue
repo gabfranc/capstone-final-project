@@ -20,29 +20,29 @@ const openRecipe = () => {
 //DONE: Create function to close the blog pop up
 
 const closeRecipe = () => {
-  showBlog.value = false;
+  showRecipe.value = false;
 };
 </script>
 <template>
-  
+
   <section>
     <ul>
       <li v-for="(recipe, index) in recipes" :key="index">
-        <NuxtLink :to="blog" @click="openRecipe">{{ recipe.title }}</NuxtLink>
-       <div v-if="showRecipe" class="popup">
-        <div class="blog-content">
-          <h2>{{ blog.title }}</h2>
-          <p>{{ blog.description }}</p>
+        <NuxtLink :to="recipe" @click="openRecipe">{{ recipe.title }}</NuxtLink>
+        <div v-if="showRecipe" class="popup">
+          <div class="blog-content">
+            <h2>{{ recipe.title }}</h2>
+            <p>{{ recipe.description }}</p>
 
-          <button @click="closeRecipe">Close Recipe</button>
+            <button @click="closeRecipe">Close Recipe</button>
+          </div>
         </div>
-       </div>
-    </li>
+      </li>
     </ul>
   </section>
 </template>
 <style scoped>
-  button {
-    cursor: pointer;
-  }
+button {
+  cursor: pointer;
+}
 </style>
