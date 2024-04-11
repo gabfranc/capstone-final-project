@@ -22,7 +22,7 @@ async function signUp() {
 }
 </script>
 <template>
-  <main>
+  <main class="h-96 w-full relative bg-yellow mt-20 p-40">
     <header>
       <h1>Sign Up Page</h1>
     </header>

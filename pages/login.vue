@@ -20,7 +20,7 @@ async function login() {
 }
 </script>
 <template>
-  <main>
+  <main class="h-96 w-full relative bg-yellow mt-20 p-40">
     <header>
       <h1>Login Page</h1>
     </header>

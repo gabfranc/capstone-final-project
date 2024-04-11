@@ -1,49 +1,29 @@
 <script setup>
-import { ref } from 'vue';
-const supabase = useSupabaseClient();
-const user = useSupabaseUser();
-const router = useRouter();
-const { data: recipes } = await useAsyncData("recipes", async () => {
-  const { data } = await supabase.from("recipes").select("*");
-  return data;
+import { toRaw } from "vue";
 
+
+definePageMeta({
+  layout: 'meals'
 })
+//TODO: fetch the products
+const { data, error } = await useFetch(
+  `https://www.themealdb.com/api/json/v1/1/search.php?s=A`
+);
+let results = [];
+// const meals = await response.json()
+console.log(data.value.meals)
 
-//DONE: Make blog post appear when the nuxtlink is clicked
-const showBlog = ref(false);
 
-//DONE: Create Function to make the blog popup
-const openBlog = () => {
-  showBlog.value = true;
-};
-
-//DONE: Create function to close the blog pop up
-
-const closeBlog = () => {
-  showBlog.value = false;
-};
 </script>
 <template>
-
-  <section class="flex-col">
-    <ul>
-      <li v-for="(recipe, index) in recipes" :key="index">
-        <NuxtLink :to="recipe" @click="openBlog">{{ recipe.title }}</NuxtLink>
-        <div v-if="showBlog" class="popup">
-          <div class="blog-content">
-            <h2>{{ recipe.title }}</h2>
-            <p>{{ recipe.image }}</p>
-            <p>{{ recipe.description }}</p>
-
-            <button @click="closeBlog">Close Recipe</button>
-          </div>
-        </div>
-      </li>
-    </ul>
-  </section>
+  <header class="bg-yellow p-12">
+    <h1 class="m-auto p-auto font-bold text-2xl">RECIPES</h1>
+  </header>
+  <main class="bg-yellow">
+    <section class="grid grid-cols-4 gap-5">
+      <div v-for="meal in meals" :key="meal.id">
+        <h2>{{ meal.name }}</h2>
+      </div>
+    </section>
+  </main>
 </template>
-<style scoped>
-button {
-  cursor: pointer;
-}
-</style>
