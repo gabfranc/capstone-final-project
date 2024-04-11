@@ -15,7 +15,7 @@ const { data: recipe } = await useAsyncData("recipe", async () => {
   <div v-if="recipe.value">
     <h2> {{ recipe.value.title }}</h2>
     <p> {{ recipe.value.description }}</p>
-    <p>Last Update: {{ recipe.date_updated }}</p>
+    <p>Blog Last Update: {{ recipe.date_updated }}</p>
   </div>
   <!-- <main>
     <h1>{{ blog.title }}</h1>

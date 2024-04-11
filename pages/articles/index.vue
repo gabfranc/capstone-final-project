@@ -9,12 +9,15 @@ const { data: recipes } = await useAsyncData("recipes", async () => {
 
 })
 
+//DONE: Make blog post appear when the nuxtlink is clicked
 const showBlog = ref(false);
 
+//DONE: Create Function to make the blog popup
 const openBlog = () => {
   showBlog.value = true;
 };
 
+//DONE: Create function to close the blog pop up
 
 const closeBlog = () => {
   showBlog.value = false;
@@ -22,13 +25,14 @@ const closeBlog = () => {
 </script>
 <template>
 
-  <section>
+  <section class="flex-col">
     <ul>
       <li v-for="(recipe, index) in recipes" :key="index">
-        <NuxtLink :to="recipe" @click="openBlog">{{ blog.title }}</NuxtLink>
+        <NuxtLink :to="recipe" @click="openBlog">{{ recipe.title }}</NuxtLink>
         <div v-if="showBlog" class="popup">
           <div class="blog-content">
             <h2>{{ recipe.title }}</h2>
+            <p>{{ recipe.image }}</p>
             <p>{{ recipe.description }}</p>
 
             <button @click="closeBlog">Close Recipe</button>

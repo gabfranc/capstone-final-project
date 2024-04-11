@@ -13,6 +13,6 @@ async function logout() {
 }
 </script>
 <template>
- <h1>Email:{{ user.email }}</h1>
- <button @click="logout" type="button">Logout</button>
+  <h1>Email:{{ user.email }}</h1>
+  <button @click="logout" type="button">Logout</button>
 </template>
