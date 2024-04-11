@@ -7,12 +7,12 @@
     <ul class="font-sans flex gap-14 text-12 mt-4 p-4">
       <!-- <li><NuxtLink to="/about">ABOUT</NuxtLink></li> -->
       <li>
-        <NuxtLink to="/recipes" class="relative m-auto p-auto">RECIPES</NuxtLink>
+        <NuxtLink to="/articles" class="relative m-auto p-auto">RECIPES</NuxtLink>
       </li>
       <li>
-        <NuxtLink to=" /contact" class="relative m-auto p-auto">CONTACT</NuxtLink>
+        <NuxtLink to="/contact" class="relative m-auto p-auto">CONTACT</NuxtLink>
       </li>
-      <button type=" button">
+      <button type="button">
           <NuxtLink to="/login">LOG IN</NuxtLink>
           </button>
           <button type="button">

@@ -6,7 +6,7 @@ const router = createRouter({
     {
       path: '/recipes',
       name: 'Recipes',
-      component: () => import('../recipes/meals')
+      component: () => import('../articles')
     }, {
       path: '/post/:id',
       name: 'Post',
