@@ -59,11 +59,12 @@ const hideRecipe = () => {
 </script>
 
 <template>
-  <div class="bg-yellow m-auto p-auto relative">
+  <div class="text-center h-auto bg-yellow m-auto p-auto relative overflow-y-visible">
     <h1 class="text-4xl pt-12 text-maroon">Meals</h1>
     <!-- Search Bar -->
-    <input type="text" v-model="searchQuery" placeholder="Search..." class="mt-4 p-2 border border-gray-300 rounded-md">
-    <ul class="grid grid-cols-3 gap-16 mt-12 ">
+    <input type="text" v-model="searchQuery" placeholder="Search..."
+      class="mt-4 p-2 border border-yellow rounded-md active:italic">
+    <ul class="grid grid-cols-3 gap-16 pt-2">
       <li v-for="meal in filteredMeals" :key="meal.idMeal" class="h-24 mt-12" v-show="!meal.hidden">
         <NuxtLink :to="meal" @click="showRecipe(meal)">
           <img :src="meal.strMealThumb" class="m-auto p-auto justify-center h-28" />
@@ -115,6 +116,9 @@ const hideRecipe = () => {
         <p class="ml-10 mt-12 mr-10 pl-12 text-left ">{{ selectedMeal.strInstructions }}</p>
       </div>
       <button @click="hideRecipe" class="absolute top-0 left-0 m-4 text-black font-bold hover:italic">GO BACK</button>
+    </div>
+    <div class="review-box mt-24">
+      <ReviewBox />
     </div>
   </div>
 </template>

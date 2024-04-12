@@ -22,20 +22,19 @@ async function signUp() {
 }
 </script>
 <template>
-  <main class="h-96 w-full relative bg-yellow mt-20 p-40">
+  <main class="h-full w-full relative bg-yellow m-auto p-48">
     <header>
-      <h1>Sign Up Page</h1>
+      <h1 class="text-maroon text-2xl font-semibold italic">Sign Up Page</h1>
     </header>
     <form @submit.prevent="signUp">
-      <label for="email">
-        Email:
-        <input type="email" name="email" v-model="email" />
-      </label>
-      <label for="password">
-        Password:
-        <input type="password" name="password" v-model="password" />
-      </label>
-      <input type="submit" value="sign-in" @click="signUp" />
+
+      <input type="email" placeholder="email" name="email" id="email" v-model="email" class="mt-4 cursor-text" />
+      <br>
+      <input type="password" placeholder="password" name="password" id="password" v-model="password"
+        class="mt-4 cursor-text" />
+      <br>
+        <input type="submit" value="Sign Up" @click="signUp"
+        class="bg-maroon text-white rounded shadow-sm shadow-black cursor-pointer w-16 h-8 mt-9" />
     </form>
   </main>
 </template>

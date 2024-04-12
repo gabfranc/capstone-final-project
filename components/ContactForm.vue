@@ -13,9 +13,11 @@ const parEl = ref('please contact us!');
     <form class="block m-auto p-auto">
       <div class="block gap-8 p-8">
       <input type="text" name="name" placeholder="name" v-model="name"/>
-      <input type="email" name="email" placeholder="email" v-model="email"/>
+      <br>
+      <input type="email" name="email" placeholder="email" v-model="email" class="mt-2"/>
+      <br>
       <div>
-        <textarea type="message" name="message" placeholder="message" v-model="message"></textarea>
+        <textarea type="message" name="message" placeholder="message" v-model="message" class="mt-2 w-48"></textarea>
       </div>
     </div>
       <button type="submit">SUBMIT</button>

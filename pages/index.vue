@@ -16,6 +16,7 @@ const { data: recipes } = await useFetch("/pages/recipes", {
         </p>
       </div>
     </section>
+    <ServiceCards />
     <ContactForm />
   </main>
 </template>
