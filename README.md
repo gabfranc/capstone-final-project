@@ -13,7 +13,6 @@
   - NUXTJS
   - TailWindCSS
   - Supabase/Directus ~ for collecting data for the login/sign up page
-  - DAYJS ~ for displaying current date and time
 
 ## ABOUT WEBSITE
 

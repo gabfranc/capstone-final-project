@@ -6,7 +6,7 @@ const parEl = ref('please contact us!');
 </script>
 <template>
   <header class="text-center p-40">
-  <h1>{{ header }}</h1>
+  <h1 class="text-2xl italic text-maroon font-bold opacity-80">{{ header }}</h1>
   <p>{{ parEl }}</p>
   </header>
   <main class="relative justify-center align-middle text-center m-auto p-auto">
@@ -20,7 +20,7 @@ const parEl = ref('please contact us!');
         <textarea type="message" name="message" placeholder="message" v-model="message" class="mt-2 w-48"></textarea>
       </div>
     </div>
-      <button type="submit">SUBMIT</button>
+      <button type="submit" class="bg-maroon text-white h-8 w-20 rounded-lg mb-12">SUBMIT</button>
     </form>
   </main>
 </template>
