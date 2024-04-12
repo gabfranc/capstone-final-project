@@ -40,6 +40,9 @@ const exitNav = () => {
 
         <ul class="text-2xl mt-2">
           <li class="p-2 hover:scale-110 transition duration-150 ease-in hover:text-black">
+            <NuxtLink to="/about">ABOUT</NuxtLink>
+          </li>
+          <li class="p-2 hover:scale-110 transition duration-150 ease-in hover:text-black">
             <NuxtLink to="/articles">Recipes</NuxtLink>
           </li>
           <li class="p-2 hover:scale-110 transition duration-150 ease-in hover:text-black">
