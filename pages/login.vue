@@ -26,10 +26,10 @@ async function login() {
     </header>
     <form @submit.prevent="login">
 
-      <input type="email" placeholder="email" name="email" id="email" v-model="email" class="mt-4 cursor-text" />
+      <input type="email" placeholder="email" name="email" id="email" v-model="email" class="mt-4 cursor-text opacity-90" />
       <br>
       <input type="password" placeholder="password" name="password" id="password" v-model="password"
-        class="mt-4 cursor-text" />
+        class="mt-4 cursor-text opacity-90" />
       <br>
         <input type="submit" value="Log In" @click="login"
         class="bg-maroon text-white rounded shadow-sm shadow-black cursor-pointer w-16 h-8 mt-9" />
