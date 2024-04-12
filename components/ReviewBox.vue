@@ -7,7 +7,7 @@ const img = [
 
   <h2 class="text-center mb-12 mt-24 font-bold text-maroon text-2xl italic">Reviewed Recipes</h2>
   <main class="sm:grid sm:ml-12 md:ml-2 md:grid-cols-3 gap-2">
-    <section>
+    <section class="hover:animate-pulse cursor-pointer">
       <div class="flex">
         <div
           class="flex sm:ml-24 md:ml-auto pt-4 pl-16 ml-56 mb-24 bg-white opacity-70 rounded-lg h-80 w-96 text-center relative">
@@ -36,7 +36,7 @@ const img = [
         </div>
       </div>
     </section>
-    <section>
+    <section class="hover:animate-pulse cursor-pointer">
       <div
         class="flex sm:ml-24 md:ml-4 pt-4 pl-16 ml-64 mb-14 bg-white opacity-70 rounded-lg h-80 w-96 text-center relative">
         <div>
@@ -64,7 +64,7 @@ const img = [
         </div>
       </div>
     </section>
-    <section>
+    <section class="hover:animate-pulse cursor-pointer">
       <div
         class="flex sm:ml-24 md:ml-4 pt-4 pl-16 ml-64 mb-24 bg-white opacity-70 rounded-lg h-80 w-96 text-center relative">
         <div>
@@ -92,7 +92,7 @@ const img = [
         </div>
       </div>
     </section>
-    <section class="pb-8">
+    <section class="pb-8 hover:animate-pulse cursor-pointer">
       <div
         class="flex sm:ml-24 md:ml-4 pt-4 pl-16 ml-64 mb-24 bg-white opacity-70 rounded-lg h-80 w-96 text-center relative">
         <div>
@@ -121,7 +121,7 @@ const img = [
         </div>
       </div>
     </section>
-    <section class="pb-8">
+    <section class="pb-8 hover:animate-pulse cursor-pointer">
       <div
         class="flex sm:ml-24 md:ml-4 pt-4 pl-16 ml-64 mb-24 bg-white opacity-70 rounded-lg h-80 w-96 text-center relative">
         <div>
@@ -148,7 +148,7 @@ const img = [
         </div>
       </div>
     </section>
-    <section class="pb-8">
+    <section class="pb-8 hover:animate-pulse cursor-pointer">
       <div
         class="flex sm:ml-24 md:ml-4 pt-4 pl-16 ml-64 mb-24 bg-white opacity-70 rounded-lg h-80 w-96 text-center relative">
         <div>
@@ -175,7 +175,7 @@ const img = [
         </div>
       </div>
     </section>
-    <section class="pb-8">
+    <section class="pb-8 hover:animate-pulse cursor-pointer">
       <div
         class="flex sm:ml-24 md:ml-4 pt-4 pl-16 ml-64 mb-24 bg-white opacity-70 rounded-lg h-80 w-96 text-center relative">
         <div>
@@ -204,7 +204,7 @@ const img = [
         </div>
       </div>
     </section>
-    <section class="pb-8">
+    <section class="pb-8 hover:animate-pulse cursor-pointer">
       <div
         class="flex sm:ml-24 md:ml-4 pt-4 pl-16 ml-64 mb-24 bg-white opacity-70 rounded-lg h-80 w-96 text-center relative">
         <div>
@@ -234,7 +234,7 @@ const img = [
         </div>
       </div>
     </section>
-    <section class="pb-8">
+    <section class="pb-8 hover:animate-pulse cursor-pointer">
       <div
         class="flex sm:ml-24 md:ml-4 pt-4 pl-16 ml-64 mb-24 bg-white opacity-70 rounded-lg h-80 w-96 text-center relative">
         <div>
@@ -256,7 +256,8 @@ const img = [
             </div>
           </div>
           <h2 class="text-left text-lg font-bold mt-2">Zane Bennett</h2>
-          <p class="mt-8 w-64 text-left">This Ribollita recipe is a game-changer! The flavors were so bold and unexpected, and the
+          <p class="mt-8 w-64 text-left">This Ribollita recipe is a game-changer! The flavors were so bold and
+            unexpected, and the
             presentation was restaurant-quality. I can't believe I made something this impressive in my own kitchen!
           </p>
         </div>

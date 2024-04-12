@@ -62,15 +62,16 @@ const hideRecipe = () => {
   <div class="text-center h-auto bg-yellow m-auto p-auto relative overflow-y-visible">
     <div class="headimage">
       <div class="header sm:mr-96 sm:pr-64 md:mr-0 md:pr-2">
-        <h1 class="text-4xl pt-12 text-black font-bold">Meals</h1>
+        <h1 class="text-4xl pt-12 text-white opacity-90 font-bold">Meals</h1>
         <!-- Search Bar -->
         <input type="text" v-model="searchQuery" placeholder="Search..."
           class="opacity-90 mt-4 p-2 border border-yellow rounded-md active:italic">
       </div>
-      </div>
-    
+    </div>
+
     <ul class="grid grid-cols-3 gap-16 pt-2">
-      <li v-for="meal in filteredMeals" :key="meal.idMeal" class="h-24 mt-12" v-show="!meal.hidden">
+      <li v-for="meal in filteredMeals" :key="meal.idMeal" class="h-24 mt-12 hover:animate-pulse active:animate-ping cursor-pointer"
+        v-show="!meal.hidden">
         <NuxtLink :to="meal" @click="showRecipe(meal)">
           <img :src="meal.strMealThumb" class="m-auto p-auto justify-center h-36" />
           <h1 class="text-maroon text-lg font-bold hover:italic">{{ meal.strMeal }}</h1>
@@ -120,7 +121,7 @@ const hideRecipe = () => {
         <h3 class="mt-14 text-maroon font-bold italic text-lg">Instructions</h3>
         <p class="ml-10 mt-12 mr-10 pl-12 text-left ">{{ selectedMeal.strInstructions }}</p>
       </div>
-      <button @click="hideRecipe" class="absolute top-0 left-0 m-4 text-black font-bold hover:italic">GO BACK</button>
+      <button @click="hideRecipe" class="absolute top-0 left-0 m-4 text-yellow font-bold hover:italic">GO BACK</button>
     </div>
     <div class="review-box mt-24">
       <ReviewBox />
@@ -130,7 +131,7 @@ const hideRecipe = () => {
 
 <style>
 .headimage {
-  background-image: url('https://images.pexels.com/photos/8625452/pexels-photo-8625452.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+  background-image: url('https://images.pexels.com/photos/159987/pexels-photo-159987.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
   background-size: cover;
   background-position: center;
   width: 1257px;
