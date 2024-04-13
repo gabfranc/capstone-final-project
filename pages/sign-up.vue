@@ -1,6 +1,7 @@
 <script setup>
 const client = useSupabaseClient();
 const router = useRouter();
+const user = useSupabaseUser();
 const email = ref("");
 const name = ref("");
 const password = ref(null);
@@ -11,10 +12,11 @@ async function signUp() {
   try {
     const { data, error } = await client.auth.signUp({
       name: name.value,
+      user: user.value,
       email: email.value,
       password: password.value,
     });
-    console.log("data", data, name, email, password);
+    console.log("data", data, user, name, email, password);
     if (error) throw error;
     successMsg.value = "Check your email to confirm your account";
     router.push("/login");
