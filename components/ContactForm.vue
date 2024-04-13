@@ -9,8 +9,8 @@ const parEl = ref('please contact us!');
   <h1 class="text-2xl italic text-maroon font-bold opacity-80">{{ header }}</h1>
   <p>{{ parEl }}</p>
   </header>
-  <main class="relative justify-center align-middle text-center m-auto p-auto">
-    <form class="block m-auto p-auto">
+  <main class="relative justify-center align-middle text-center ">
+    <form class="block m-auto">
       <div class="block gap-8 p-8">
       <input type="text" name="name" placeholder="name" v-model="name"/>
       <br>
@@ -24,3 +24,9 @@ const parEl = ref('please contact us!');
     </form>
   </main>
 </template>
+<style scoped>
+  main {
+    margin-top: -82px;
+    padding-top: -10px;
+  }
+</style>

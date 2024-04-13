@@ -10,7 +10,7 @@ const { data: recipes } = await useFetch("/pages/recipes", {
     <section>
       <div class="relative m-36 p-auto">
         <h2 class="opacity-80 font-bold italic text-2xl text-center text-maroon">Our Mission</h2>
-        <p class="text-center mt-12 p-12">
+        <p class="text-center mt-8 p-12">
           At Quick Foods, our mission revolves around simplifying the culinary experience for everyone. We strive to
           empower individuals with the tools and resources necessary to create delicious meals swiftly and effortlessly.
           Whether you're a busy parent juggling multiple responsibilities or a novice cook exploring the joys of the
@@ -24,14 +24,20 @@ const { data: recipes } = await useFetch("/pages/recipes", {
           bonds, and it is our privilege to be a part of that experience.
         </p>
       </div>
-      <div>
-        <h2 class="opacity-80 font-bold italic text-2xl text-center text-maroon">SERVICES</h2>
-        <ServiceCards />
+      <div class="serv">
+        <ServiceCards class="serv-cards"/>
       </div>
-      <div>
+      <div class="review">
         <ReviewBox />
       </div>
     </section>
-    <ContactForm />
+    <div class="contact pb-24">
+      <ContactForm />
+    </div>
   </main>
 </template>
+<style scoped>
+.review {
+  margin-top: -28vh;
+}
+</style>

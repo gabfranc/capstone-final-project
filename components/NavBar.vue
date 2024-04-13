@@ -30,28 +30,28 @@ const exitNav = () => {
       </svg>
     </div>
 
-    <div v-show="sideNavOpen" class="fixed inset-0 bg-transparent z-10 transition-opacity duration-500"
+    <div v-show="sideNavOpen" class="fixed inset-0 bg-transparent z-10 transition-opacity duration-500 "
       :class="{ 'opacity-0 pointer-events-none': !sideNavOpen }">
       <div
         class="fixed top-0 right-0 bg-maroon text-yellow h-full flex flex-col justify-center items-center overflow-hidden duration-500 font-bold z-20"
-        :class="{ 'translate-x-0': sideNavOpen, 'translate-x-full': !sideNavOpen, 'w-full md:w-3/5': true }">
+        :class="{ 'translate-x-0': sideNavOpen, 'translate-x-full': !sideNavOpen, 'w-full md:w-56': true }">
         <a href="javascript:void(0)" @click="exitNav"
           class="text-3xl absolute top-0 right-0 mr-3 mt-3 hover:scale-125 transition duration-150 ease-in">&times;</a>
 
-        <ul class="text-2xl mt-2">
-          <li class="p-2 hover:scale-110 transition duration-150 ease-in hover:text-black">
+        <ul class="text-lg mt-2">
+          <li class="p-2 hover:scale-110 transition duration-150 ease-in hover:text-orange">
             <NuxtLink to="/about">ABOUT</NuxtLink>
           </li>
-          <li class="p-2 hover:scale-110 transition duration-150 ease-in hover:text-black">
+          <li class="p-2 hover:scale-110 transition duration-150 ease-in hover:text-orange active:animate-ping">
             <NuxtLink to="/articles">Recipes</NuxtLink>
           </li>
-          <li class="p-2 hover:scale-110 transition duration-150 ease-in hover:text-black">
+          <li class="p-2 hover:scale-110 transition duration-150 ease-in hover:text-orange active:animate-ping">
             <NuxtLink to="/contact">Contact</NuxtLink>
           </li>
-          <li class="p-2 hover:scale-110 transition duration-150 ease-in hover:text-black">
+          <li class="p-2 hover:scale-110 transition duration-150 ease-in hover:text-orange active:animate-ping">
             <NuxtLink to="/login">Log In</NuxtLink>
           </li>
-          <li class="p-2 hover:scale-110 transition duration-150 ease-in hover:text-black">
+          <li class="p-2 hover:scale-110 transition duration-150 ease-in hover:text-orange active:animate-ping">
             <NuxtLink to="/sign-up">Sign Up</NuxtLink>
           </li>
         </ul>

@@ -61,15 +61,15 @@ const hideRecipe = () => {
 <template>
   <div class="text-center h-auto bg-yellow m-auto p-auto relative overflow-y-visible">
     <div class="headimage">
-      <div class="header sm:mr-96 sm:pr-64 md:mr-0 md:pr-2">
+      <div class="header sm:mr-96 sm:pr-64 md:mr-0 md:pr-2 pt-0">
         <h1 class="text-4xl pt-12 text-white opacity-90 font-bold">Meals</h1>
         <!-- Search Bar -->
         <input type="text" v-model="searchQuery" placeholder="Search..."
-          class="opacity-90 mt-4 p-2 border border-yellow rounded-md active:italic">
+          class="opacity-77 mt-8 p-2 border border-yellow h-12 w-96 rounded-md active:italic">
       </div>
     </div>
 
-    <ul class="grid grid-cols-3 gap-16 pt-2">
+    <ul class="grid grid-cols-3 gap-16 pt-24">
       <li v-for="meal in filteredMeals" :key="meal.idMeal" class="h-24 mt-12 hover:animate-pulse active:animate-ping cursor-pointer"
         v-show="!meal.hidden">
         <NuxtLink :to="meal" @click="showRecipe(meal)">
@@ -123,7 +123,7 @@ const hideRecipe = () => {
       </div>
       <button @click="hideRecipe" class="absolute top-0 left-0 m-4 text-yellow font-bold hover:italic">GO BACK</button>
     </div>
-    <div class="review-box mt-24">
+    <div class="review-box mt-24 pt-2">
       <ReviewBox />
     </div>
   </div>
@@ -134,7 +134,16 @@ const hideRecipe = () => {
   background-image: url('https://images.pexels.com/photos/159987/pexels-photo-159987.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
   background-size: cover;
   background-position: center;
+  margin-top:12px;
   width: 1257px;
-  height: 250px;
+  height: 130px;
+}
+
+.headimage h1 {
+  margin-top: -15px;
+  padding-top: -15px;
+}
+.headimage input {
+  margin-top:72px;
 }
 </style>

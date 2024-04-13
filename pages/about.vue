@@ -3,7 +3,7 @@
     <header class="bg-yellow">
       <div class="head-image">
         <div class="header sm:mr-96 sm:pr-64 md:mr-0 md:pr-2">
-          <h1 class="text-4xl pt-24 text-white opacity-90 font-bold">ABOUT</h1>
+          <h1 class="text-4xl text-center pt-24 text-maroon opacity-90 font-bold">ABOUT</h1>
         </div>
       </div>
     </header>
@@ -24,14 +24,16 @@
       </p>
     </div>
     <div>
-      <h2 class="opacity-80 font-bold italic text-2xl text-center text-maroon">SERVICES</h2>
       <ServiceCards />
+    </div>
+    <div>
+      <ReviewBox />
     </div>
   </section>
 </template>
 <style scoped>
 .head-image {
-  background-image: url('https://images.pexels.com/photos/407041/pancakes-maple-syrup-sweet-407041.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+  background-image: url('https://images.pexels.com/photos/266896/pexels-photo-266896.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
   background-size: cover;
   background-position: center;
   width: 1257px;
