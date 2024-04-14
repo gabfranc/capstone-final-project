@@ -75,7 +75,7 @@ const hideRecipe = () => {
         <NuxtLink :to="meal" @click="showRecipe(meal)">
           <img :src="meal.strMealThumb" class="m-auto p-auto justify-center h-36" />
           <h1 class="text-maroon text-lg font-bold hover:italic">{{ meal.strMeal }}</h1>
-          <p class="text-xs font-bold font-orange">{{ meal.strCategory }}</p>
+          <p class="text-xs font-bold font-orange">{{ meal.strArea }}</p>
         </NuxtLink>
       </li>
     </ul>
