@@ -82,7 +82,10 @@ const hideRecipe = () => {
     <!-- Popup for Selected Recipe -->
     <div v-if="selectedMeal" class="popup w-fit h-fit shadow-orange-12 shadow-md m-auto p-auto">
       <!-- Recipe Details -->
-      <LikeButton />
+      <div class="flex justify-center items-center">
+        <LikeButton />
+        <ShareButton />
+      </div>
       <h1 class="font-bold text-maroon italic text-3xl mt-12 pb-12">{{ selectedMeal.strMeal }}</h1>
       <div class=" justify-center gap-16 m-auto p-auto flex text-center">
         <h2 class="text-md font-bold italic">{{ selectedMeal.strTags }}</h2>

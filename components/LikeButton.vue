@@ -1,24 +1,19 @@
 <script setup>
 import { ref } from 'vue';
 
-// const likeButtonImg = '../Images/heart.png';
-// const dislikeButtonImg = '../Images/unheart.png';
-
 const isLiked = ref(false);
 
 const toggleLike = () => {
   isLiked.value = !isLiked.value;
 };
 </script>
-
 <template>
-  <div>
-    <button @click="toggleLike"
-      :class="['sm:ml-48', 'md:ml-80', 'absolute', isLiked ? 'text-yellow' : 'text-maroon', 'bg-yellow', 'hover:bg-orange', 'focus:bg-maroon', 'focus:text-yellow','hover:opacity-80', isLiked ? 'bg-maroon' : 'focus:bg-yellow', 'font-bold', 'py-2', 'px-4', 'justify-right', 'rounded']">
-      {{ isLiked ? 'UnLike' : 'Like' }}
-    </button>
-  </div>
+  <button class="like-button hover:text-orange" :class="{ 'text-maroon': isLiked }" @click="toggleLike">
+    <svg class="heart-icon w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+      <path :class="{ 'text-maroon': isLiked }" fill="currentColor"
+        d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+    </svg>
+  </button>
 </template>
 
 
-<!-- absolute top-0 left-0 m-4 text-yellow font-bold hover:italic -->

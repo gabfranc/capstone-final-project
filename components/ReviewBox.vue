@@ -5,7 +5,7 @@ const img = [
 </script>
 <template>
 
-  <h2 class="text-center mb-12 mt-40 font-bold text-maroon text-2xl italic">Reviewed Recipes</h2>
+  <h2 class="text-center mb-12 sm:mt-72 md:mt-40 font-bold text-maroon text-2xl italic">Reviewed Recipes</h2>
   <main class="sm:grid sm:ml-12 md:ml-2 md:grid-cols-3 mt-20 gap-2">
     <section class="hover:animate-pulse cursor-pointer">
       <div class="flex">
