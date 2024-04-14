@@ -14,7 +14,7 @@ const toggleLike = () => {
 <template>
   <div>
     <button @click="toggleLike"
-      :class="['sm:ml-48', 'md:ml-80', 'absolute', isLiked ? 'text-yellow' : 'text-maroon', 'bg-yellow', 'hover:bg-orange', 'focus:bg-maroon', 'hover:opacity-80', isLiked ? 'bg-maroon' : 'focus:bg-yellow', 'font-bold', 'py-2', 'px-4', 'justify-right', 'rounded']">
+      :class="['sm:ml-48', 'md:ml-80', 'absolute', isLiked ? 'text-yellow' : 'text-maroon', 'bg-yellow', 'hover:bg-orange', 'focus:bg-maroon', 'focus:text-yellow','hover:opacity-80', isLiked ? 'bg-maroon' : 'focus:bg-yellow', 'font-bold', 'py-2', 'px-4', 'justify-right', 'rounded']">
       {{ isLiked ? 'UnLike' : 'Like' }}
     </button>
   </div>
