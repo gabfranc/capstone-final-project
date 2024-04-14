@@ -73,7 +73,7 @@ const hideRecipe = () => {
       <li v-for="meal in filteredMeals" :key="meal.idMeal" class="h-24 mt-12 hover:animate-pulse active:animate-ping cursor-pointer"
         v-show="!meal.hidden">
         <NuxtLink :to="meal" @click="showRecipe(meal)">
-          <img :src="meal.strMealThumb" class="m-auto p-auto justify-center h-36" />
+          <img :src="meal.strMealThumb" class="m-auto p-auto justify-center h-36 rounded-lg" />
           <h1 class="text-maroon text-lg font-bold hover:italic">{{ meal.strMeal }}</h1>
           <p class="text-xs font-bold font-orange">{{ meal.strArea }}</p>
         </NuxtLink>
