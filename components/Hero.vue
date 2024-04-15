@@ -25,6 +25,7 @@
   }
   p {
     margin-left:8vh;
+    text-shadow: 2px 2px 2px black;
   }
   button{
     margin-left:8vh;
