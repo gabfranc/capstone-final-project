@@ -5,7 +5,7 @@
       <div class="text-center">
         <img src="/Images/Light.png" class="sm:h-16 md:h-20 mx-auto mb-4" alt="logo">
         <p class="font-bold italic text-yellow mr-14 mb-4">RECIPES THAT ARE QUICK AND SIMPLE</p>
-        <button class="bg-maroon text-yellow font-bold mr-64 py-2 px-4 rounded-lg shadow-lg hover:animate-pulse hover:shadow-black hover:shadow-md">
+        <button class="bg-maroon text-yellow font-bold mr-64 py-2 px-4 rounded-lg shadow-lg hover:animate-pulse hover:shadow-black hover:shadow-md ">
           <NuxtLink to="/articles">RECIPES</NuxtLink>
         </button>
       </div>
