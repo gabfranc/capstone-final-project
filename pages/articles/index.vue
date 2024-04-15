@@ -59,7 +59,7 @@ const hideRecipe = () => {
 </script>
 
 <template>
-  <div class="text-center h-auto bg-yellow m-auto p-auto relative overflow-y-visible">
+  <div class="ease-in-out text-center h-auto bg-yellow m-auto p-auto relative overflow-y-visible">
     <div class="headimage">
       <div class="header sm:mr-96 sm:pr-64 md:mr-0 md:pr-2 pt-0">
         <h1 class="text-4xl pt-12 text-white opacity-90 font-bold">Meals</h1>

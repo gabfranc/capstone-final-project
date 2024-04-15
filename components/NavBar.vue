@@ -14,7 +14,7 @@ const exitNav = () => {
 <template>
   <nav class="flex justify-between items-center p-4 bg-maroon">
     <NuxtLink to="/">
-      <img src="/Images/Dark.png" class="h-14">
+      <img src="/Images/Dark.png" class="h-14 hover:ease-in hover:duration-75 hover:animate-pulse">
     </NuxtLink>
 
     <div @click="openNav" class="hover:scale-125 transition duration-150 ease-in cursor-pointer">
@@ -30,7 +30,7 @@ const exitNav = () => {
       </svg>
     </div>
 
-    <div v-show="sideNavOpen" class="fixed inset-0 bg-transparent z-10 transition-opacity duration-500 "
+    <div v-show="sideNavOpen" class="hover:animate-ping fixed inset-0 bg-transparent z-10 transition-opacity duration-500 "
       :class="{ 'opacity-0 pointer-events-none': !sideNavOpen }">
       <div
         class="fixed top-0 right-0 bg-maroon text-yellow h-full flex flex-col justify-center items-center overflow-hidden duration-500 font-bold z-20"
