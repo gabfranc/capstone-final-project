@@ -14,7 +14,7 @@ const exitNav = () => {
 <template>
   <nav class="flex justify-between items-center p-4 bg-maroon">
     <NuxtLink to="/">
-      <img src="/Images/Dark.png" class="h-14 hover:ease-in hover:duration-75">
+      <img src="/Images/Dark.png" class="h-14">
     </NuxtLink>
 
     <div @click="openNav" class="hover:scale-125 transition duration-150 ease-in cursor-pointer">
