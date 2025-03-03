@@ -1,7 +1,12 @@
 <script setup>
 import { ref } from 'vue';
+import { useSupabaseUser, useSupabaseClient } from '#supabase/client';
+import { useRouter } from 'vue-router';
 
 const sideNavOpen = ref(false);
+const user = useSupabaseUser();
+const client = useSupabaseClient();
+const router = useRouter();
 
 const openNav = () => {
   sideNavOpen.value = true;
@@ -10,11 +15,17 @@ const openNav = () => {
 const exitNav = () => {
   sideNavOpen.value = false;
 };
+
+async function logout() {
+  await client.auth.signOut();
+  router.push('/'); // Redirect to home after logout
+}
 </script>
+
 <template>
   <nav class="flex justify-between items-center p-4 bg-maroon">
     <NuxtLink to="/">
-      <img src="/Images/Dark.png" class="h-14">
+      <img src="/Images/Dark.png" class="h-14" />
     </NuxtLink>
 
     <div @click="openNav" class="hover:scale-125 transition duration-150 ease-in cursor-pointer">
@@ -30,11 +41,15 @@ const exitNav = () => {
       </svg>
     </div>
 
-    <div v-show="sideNavOpen" class=" fixed inset-0 bg-transparent z-10 transition-opacity duration-500 "
+    <div v-show="sideNavOpen" class="fixed inset-0 bg-transparent z-10 transition-opacity duration-500"
       :class="{ 'opacity-0 pointer-events-none': !sideNavOpen }">
       <div
         class="fixed top-0 right-0 bg-maroon text-yellow h-full flex flex-col justify-center items-center overflow-hidden duration-500 font-bold z-20"
-        :class="{ 'translate-x-0': sideNavOpen, 'translate-x-full': !sideNavOpen, 'w-full md:w-56': true }">
+        :class="{
+          'translate-x-0': sideNavOpen,
+          'translate-x-full': !sideNavOpen,
+          'w-full md:w-56': true,
+        }">
         <a href="javascript:void(0)" @click="exitNav"
           class="text-3xl absolute top-0 right-0 mr-3 mt-3 hover:scale-125 transition duration-150 ease-in">&times;</a>
 
@@ -48,15 +63,21 @@ const exitNav = () => {
           <li class="p-2 hover:scale-110 transition duration-150 ease-in hover:text-orange active:animate-ping">
             <NuxtLink to="/contact">Contact</NuxtLink>
           </li>
-          <li class="p-2 hover:scale-110 transition duration-150 ease-in hover:text-orange active:animate-ping">
-            <NuxtLink to="/login">Log In</NuxtLink>
-          </li>
-          <li class="p-2 hover:scale-110 transition duration-150 ease-in hover:text-orange active:animate-ping">
-            <NuxtLink to="/sign-up">Sign Up</NuxtLink>
-          </li>
+          <template v-if="user">
+            <li class="p-2 hover:scale-110 transition duration-150 ease-in hover:text-orange active:animate-ping">
+              <button @click="logout">Logout</button>
+            </li>
+          </template>
+          <template v-else>
+            <li class="p-2 hover:scale-110 transition duration-150 ease-in hover:text-orange active:animate-ping">
+              <NuxtLink to="/login">Log In</NuxtLink>
+            </li>
+            <li class="p-2 hover:scale-110 transition duration-150 ease-in hover:text-orange active:animate-ping">
+              <NuxtLink to="/sign-up">Sign Up</NuxtLink>
+            </li>
+          </template>
         </ul>
       </div>
     </div>
-
   </nav>
 </template>

@@ -27,7 +27,8 @@ async function signUp() {
 </script>
 <template>
   <main class="backimage pt-64 overflow-x-hidden">
-    <div class="bg-yellow opacity-85 sm:ml-24 sm:w-96 sm:pl-24 sm:pr-24 md:ml-56 pt-12 md:pr-24 md:pl-24 pb-40 md:w-2/3">
+    <div
+      class="bg-yellow opacity-85 sm:ml-24 sm:w-96 sm:pl-24 sm:pr-24 md:ml-56 pt-12 md:pr-24 md:pl-24 pb-40 md:w-2/3">
       <header>
         <h1 class="text-maroon text-2xl text-center font-semibold italic">Sign Up Page</h1>
       </header>
@@ -51,6 +52,7 @@ body {
   text-align: center;
   overflow-x: hidden;
 }
+
 .backimage {
   background-image: url('https://images.pexels.com/photos/2456435/pexels-photo-2456435.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
   background-size: cover;
