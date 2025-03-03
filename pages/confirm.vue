@@ -16,6 +16,7 @@ async function logout() {
   <main class="bg-image pt-64 overflow-x-hidden">
     <div class="bg-yellow ml-56 pt-12 pr-24 pl-24 pb-40 w-2/3">
       <h1 class="p-8 text-maroon text-2xl font-semibold italic">WELCOME! YOU ARE NOW LOGGED IN!</h1>
+      <h1 class="text-maroon text-lg font-semibold">Your Name: {{ user.name }}</h1>
       <h1 class="text-maroon text-lg font-semibold">Your Email: {{ user.email }}</h1>
       <button @click="logout" type="button"
         class="bg-maroon text-white rounded shadow-sm shadow-black cursor-pointer w-16 h-8 mt-9">Logout</button>
